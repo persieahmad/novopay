@@ -8,10 +8,11 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(
     userData === null ? false : true
   );
-  const [showSidebar, setShowSideBar] = React.useState<boolean>(true);
+  const [showSidebar, setShowSideBar] = React.useState<boolean>(false);
   return (
     <div className="approot">
-      <Navbar {...{ isLoggedIn, setIsLoggedIn, userData }} />
+      {showSidebar && <Sidebar {...{ setShowSideBar }} />}
+      <Navbar {...{ isLoggedIn, setIsLoggedIn, userData, setShowSideBar }} />
     </div>
   );
 }

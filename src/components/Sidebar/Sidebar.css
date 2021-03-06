@@ -1,4 +1,14 @@
-div {
+.sidediv {
+  position: absolute;
+  background-color: aqua;
+  z-index: 1;
+  display: inline;
+  padding: 3%;
+  height: 100vh;
+}
+
+h1 {
   position: relative;
-  width: 40%;
+  left: 74%;
+  cursor: pointer;
 }

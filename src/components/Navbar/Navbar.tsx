@@ -6,10 +6,12 @@ export default function Navbar({
   isLoggedIn,
   setIsLoggedIn,
   userData,
+  setShowSideBar,
 }: {
   isLoggedIn: boolean;
   setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
   userData: any;
+  setShowSideBar: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const [showModal, setShowModal] = React.useState<boolean>(false);
   const loginData = JSON.parse(userData);
@@ -24,7 +26,12 @@ export default function Navbar({
       <div className="nav">
         <div className="space-between">
           <div>
-            <span>{String.fromCharCode(9776)}</span>
+            <span
+              style={{ cursor: "pointer" }}
+              onClick={() => setShowSideBar(true)}
+            >
+              {String.fromCharCode(9776)}
+            </span>
             <img
               src="https://logo.clearbit.com/novopay.in"
               alt="novopay-logo"

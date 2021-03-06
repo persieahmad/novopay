@@ -26,15 +26,21 @@ export default function AuthModal({
 
   return (
     <div className="modal">
-      <div style={{ display: "flex", flexDirection: "row" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          position: "relative",
+          right: 76,
+        }}
+      >
         <h1>Login</h1>
         <h1
           onClick={() => setShowModal(false)}
           style={{
             color: "slateblue",
-            position: "relative",
-            left: 72,
             cursor: "pointer",
+            marginLeft: 60,
           }}
         >
           X
